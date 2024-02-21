@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    let array = [5,4,3,2,2]
+    let array2 = [1,2,3,4,5]
+    function bubbleSortAscending(array){
+        for(let i = 0; i<array.length ; i++ ){
+        for(let j = 0; j<array.length-1 ; j++ ){
+              if(array[j] > array[j+1]){
+                let temp = array[j]
+                array[j] = array[j+1]
+                array[j+1] = temp
+             }
+            }
+        
+        }
+        return array
+    }
+    function bubbleSortDescending(array2){
+        for(let i = 0; i<array2.length ; i++ ){
+        for(let j = 0; j<array2.length-1 ; j++ ){
+              if(array2[j] < array2[j+1]){
+                let temp2 = array2[j]
+                array2[j] = array2[j+1]
+                array2[j+1] = temp2
+             }
+            }
+        
+        }
+        return array2
+    }
+
+    console.log("Ascending = " + bubbleSortAscending(array)) // Time Complexity = O(n*n)
+    console.log("Descending = " + bubbleSortDescending(array2))// Time Complexity = O(n*n)
+    
+</script>
+

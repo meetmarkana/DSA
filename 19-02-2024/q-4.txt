@@ -1,0 +1,17 @@
+function Max(int arr[], int size) {
+    int max = arr[0]; // 1
+
+    for (int i = 1; i < size; i++) { //n
+        if (arr[i] > max) { //1
+            max = arr[i]; //1
+        }
+    }
+
+    return max; //1
+}
+
+
+4+n
+O(n)
+
+TimeComplexity = O(n)

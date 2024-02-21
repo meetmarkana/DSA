@@ -1,0 +1,11 @@
+function sumArray(int arr[], int size) {
+    int sum = 0;  //1
+    for (int i = 0; i < size; i++) { //n
+        sum += arr[i]; //1
+    }
+    return sum; //1
+}
+
+3n
+
+O(n)
