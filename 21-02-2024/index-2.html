@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>selection-sort-Descending</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+     
+      let arr = [14,53,92,38,72,53,65,11,22,67,44,50]
+
+      function selectionDescending(arr){
+
+        for(let i=0; i<arr.length;  i++){
+            let last = arr.length-i-1
+            let minvalue = getmin(arr,0,last)
+            swap(arr,minvalue,last)
+        }
+      }
+
+      function getmin(arr,a,k){
+        let min = 0
+
+        for (let i=a; i<=k; i++){
+            if(arr[i] < arr[min]){
+                min=i
+            }
+        }
+        return min
+      }
+
+      function swap(arr,f,s){
+        let to = arr[f]
+        arr[f]=arr[s]
+        arr[s]=to
+      }
+      selectionDescending(arr)
+      console.log("Descending = " + arr)
+</script>

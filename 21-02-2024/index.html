@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>selection-sort-Ascending</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+     
+      let arr = [14,53,92,38,72,53,65,11,22,67,44,50]
+
+      function selectionAscending(arr){
+
+        for(let i=0; i<arr.length;  i++){
+            let last = arr.length-i-1
+            let maxvalue = getmax(arr,0,last)
+            swap(arr,maxvalue,last)
+        }
+      }
+
+      function getmax(arr,a,k){
+        let max = 0
+
+        for (let i=a; i<=k; i++){
+            if(arr[i]> arr[max]){
+                max=i
+            }
+        }
+        return max
+      }
+
+      function swap(arr,f,s){
+        let to = arr[f]
+        arr[f]=arr[s]
+        arr[s]=to
+      }
+      selectionAscending(arr)
+      console.log("Ascending = " + arr)
+</script>
