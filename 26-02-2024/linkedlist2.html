@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    function linkedlist2(value){
+        this.value = value
+        this.nextnode = null
+    }
+
+    const ll21 = new linkedlist2(287)
+    const ll22 = new linkedlist2(2)
+    const ll23 = new linkedlist2(212)
+    const ll24 = new linkedlist2(332)
+    const ll25 = new linkedlist2(553)
+    const ll26 = new linkedlist2(292)
+
+    ll21.nextnode = ll22
+    ll22.nextnode = ll23
+    ll23.nextnode = ll24
+    ll24.nextnode = ll25
+    ll25.nextnode = ll26
+
+    let current = ll21
+
+    while(current != null){
+        console.log(current.value)
+        current = current.nextnode
+    }
+
+</script>
