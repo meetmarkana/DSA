@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    function Node(value){
+        this.value=value
+        this.next=null
+    }
+
+    const Node1 = new Node(213)
+    const Node2 = new Node(225)
+    const Node3 = new Node(223)
+    const Node4 = new Node(114)
+ 
+    Node1.next=Node2
+    Node2.next=Node3
+    Node3.next=Node4
+
+    function rev(head){
+        let curr = head
+        let prev = null
+
+        while(curr!=null){
+            let newNode = curr.next
+            curr.next=prev
+            prev=curr
+            curr=newNode
+        }
+        return prev
+    }
+let reversedLL = rev(Node1)
+   
+    
+let curr = reversedLL
+    
+
+    while(curr != null){
+        console.log(curr.value)
+        curr=curr.next
+    }
+</script>
