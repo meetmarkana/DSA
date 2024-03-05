@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>target</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+
+    let array=[1,22,3,4,56,6,7,89,21]
+
+    function target(arr,value){
+        let sum=0
+        let arr_1=[]
+        for(let i=0;i<arr.length;i++){
+                if(sum == value){
+                    break
+                }else{
+                    sum+=arr[i]
+                    arr_1.push(i)
+                }
+        }
+
+        return arr_1
+    }
+
+    console.log(target(array,110))
+
+</script>
