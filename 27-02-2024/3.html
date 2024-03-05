@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title> 3 </title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+
+    function Node(value){
+        this.value = value
+        this.nextnode = null
+    }
+
+    const Node1 = new Node(78)
+    const Node2 = new Node()
+    const Node3 = new Node(12)
+    const Node4 = new Node(33)
+
+    Node1.next = Node3
+    Node3.next = Node4
+
+
+
+    let current = Node1
+    while(current != null){
+        console.log(current.value)
+        current = current.next
+    }
+
+</script>
