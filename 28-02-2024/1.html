@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 1 </title>
+</head>
+<body>
+
+</body>
+</html>
+<script>
+    function Node(value){
+        this.value = value
+        this.next = null
+    }
+
+     const Node1 = new Node('N')
+     const Node2 = new Node('A')
+     const Node3 = new Node('Y')
+     const Node4 = new Node('A')
+     const Node5 = new Node('N')
+
+      Node1.next=Node2
+      Node2.next=Node3
+      Node3.next=Node4
+      Node4.next=Node5
+
+function pali(head){
+    let curr = head
+    let arr = []
+    while(curr != null){
+        arr.push(curr.value)
+        curr = curr.next
+    }
+    return arr.join('') === arr.reverse().join('')
+}
+
+      console.log(pali(Node1))
+</script>
