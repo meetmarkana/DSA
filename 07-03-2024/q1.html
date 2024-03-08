@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+
+<script>
+    let nums = [-1,0,3,5,9,12]
+    let target = 9
+
+    function linear(nums,target){
+        let check
+        for(let i=0; i<nums.length; i++){
+            if(nums[i] == target){
+                check = i
+                break
+            }else{
+                check = -1
+            }
+        }
+        return check
+    }
+    console.log(linear(nums,target))
+</script>

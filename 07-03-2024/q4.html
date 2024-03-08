@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    let nums = [10, 30 , 60 , 89 , 99 , 105 , 120]
+    let target = 99
+
+    function bs(nums,target,s,e){
+        if(s>e){
+            return -1
+        }
+        let mid = Math.round((s+e)/2)
+
+        if(nums[mid] === target){
+            return mid
+        }
+
+        if(nums[mid]<target){
+            return bs(nums,target,mid+1,e)
+        }else{
+            return bs (nums,target,s,mid-1)
+        }
+    }
+    let index = bs(nums,target,0,nums.length-1)
+
+    if(index != -1){
+        console.log("found target = " + index)
+    }else{
+        console.log("sorry! not found")
+    }
+</script>
