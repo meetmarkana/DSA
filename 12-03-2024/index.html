@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    let arr = [4,5,6,7,0,1,2]
+    let target = 3
+    function rbs(arr , target){
+        let start = 0
+        let end = arr.length-1
+        while(start <= end){
+            let mid = Math.floor((start+end)/2)
+            if(arr[mid]==target){
+                return mid
+            }
+            if(arr[start]<=arr[mid]){
+                if(arr[start]<=target&&target<arr[mid]){
+                    end=mid-1
+                }else{
+                    start=mid+1
+                }
+            }else{
+                end=mid-1
+            }
+        }
+        return -1
+    }
+    let index = rbs(arr , target)
+
+    if(index!= -1){
+        console.log("Found on" + " "+index)
+    }else{
+        console.log(index)
+    }
+</script>
